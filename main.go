@@ -253,10 +253,12 @@ func main() {
 		alignmentBox.PackStart(mainBox, true, false, 0)
 	}
 
+  win.SetMnemonicsVisible(true)
+
 	for _, b := range buttons {
 		button, _ := gtk.ButtonNew()
 		button.SetAlwaysShowImage(true)
-    button.SetProperty("use-underline", true)
+    button.SetUseUnderline(true)
 		button.SetImagePosition(gtk.POS_TOP)
 
 		pixbuf, err := createPixbuf(b.Icon, *imgSize)
